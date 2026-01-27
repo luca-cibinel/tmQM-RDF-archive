@@ -1,0 +1,6446 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xmls: <http://www.w3.org/2001/XMLSchema#> .
+@prefix inp5: <resource://integreat/p5/> .
+@prefix tm: <resource://integreat/p5/atomic/> .
+@prefix tmA: <resource://integreat/p5/atomic/atom/> .
+@prefix tmAp: <resource://integreat/p5/atomic/atom/property/> .
+@prefix tmAr: <resource://integreat/p5/atomic/atom/reference/> .
+@prefix tmArp: <resource://integreat/p5/atomic/atom/reference/property/> .
+@prefix tmB: <resource://integreat/p5/atomic/bond/> .
+@prefix tmBp: <resource://integreat/p5/atomic/bond/property/> .
+@prefix tmBr: <resource://integreat/p5/atomic/bond/reference/> .
+@prefix tmBrp: <resource://integreat/p5/atomic/bond/reference/property/> .
+@prefix tmS: <resource://integreat/p5/atomic/structure/> .
+@prefix cm: <resource://integreat/p5/complex/> .
+@prefix cmT: <resource://integreat/p5/complex/TMC/> .
+@prefix cmTp: <resource://integreat/p5/complex/TMC/property/> .
+@prefix ds: <resource://integreat/p5/datasets/> .
+@prefix dsC: <resource://integreat/p5/datasets/complexes/> .
+@prefix dsG: <resource://integreat/p5/datasets/graphs/> .
+@prefix dsL: <resource://integreat/p5/datasets/ligands/> .
+@prefix lg: <resource://integreat/p5/ligand/> .
+@prefix lgB: <resource://integreat/p5/ligand/bond/> .
+@prefix lgBp: <resource://integreat/p5/ligand/bond/property/> .
+@prefix lgBr: <resource://integreat/p5/ligand/bond/reference/> .
+@prefix lgBrp: <resource://integreat/p5/ligand/bond/reference/property/> .
+@prefix lgC: <resource://integreat/p5/ligand/centre/> .
+@prefix lgCp: <resource://integreat/p5/ligand/centre/property/> .
+@prefix lgCr: <resource://integreat/p5/ligand/centre/reference/> .
+@prefix lgCrp: <resource://integreat/p5/ligand/centre/reference/property/> .
+@prefix lgL: <resource://integreat/p5/ligand/ligand/> .
+@prefix lgLp: <resource://integreat/p5/ligand/ligand/property/> .
+@prefix lgLr: <resource://integreat/p5/ligand/ligand/reference/> .
+@prefix lgLrs: <resource://integreat/p5/ligand/ligand/reference/motif/> .
+@prefix lgLrr: <resource://integreat/p5/ligand/ligand/reference/occurrence/> .
+@prefix lgLrp: <resource://integreat/p5/ligand/ligand/reference/property/> .
+@prefix lgS: <resource://integreat/p5/ligand/structure/> .
+@prefix nm: <resource://integreat/p5/numerical/> .
+
+# ----- COMPLEX LEVEL -----
+cmT:VIDROP
+	inp5:hasProperty [
+		rdf:type cmTp:charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:spin ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:stoichiometry ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "C10H8F2N2O2W"^^xmls:string ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:metal_node_degree ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "6"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:CSD_years ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1965-2020"^^xmls:string ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:electronic_energy ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-912.314107"^^xmls:float ;
+		nm:optimisation nm:GFN2_xTB ;
+		nm:singlepoint nm:TPSSh_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:dispersion_energy ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.044627"^^xmls:float ;
+		nm:optimisation nm:GFN2_xTB ;
+		nm:singlepoint nm:TPSSh_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:dipole_moment ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "9.8755"^^xmls:float ;
+		nm:optimisation nm:GFN2_xTB ;
+		nm:singlepoint nm:TPSSh_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:metal_node_natural_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.97926"^^xmls:float ;
+		nm:optimisation nm:GFN2_xTB ;
+		nm:singlepoint nm:TPSSh_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:homo_lumo_gap ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.15288"^^xmls:float ;
+		nm:optimisation nm:GFN2_xTB ;
+		nm:singlepoint nm:TPSSh_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:homo_energy ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.26297"^^xmls:float ;
+		nm:optimisation nm:GFN2_xTB ;
+		nm:singlepoint nm:TPSSh_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:lumo_energy ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.11009"^^xmls:float ;
+		nm:optimisation nm:GFN2_xTB ;
+		nm:singlepoint nm:TPSSh_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:polarisability ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "182.179889"^^xmls:float ;
+		nm:optimisation nm:GFN2_xTB ;
+		nm:singlepoint nm:GFN2_xTB ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:molecular_mass ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "410.00638"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:n_atoms ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "25"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:n_electrons ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "190"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:lumo_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.10686"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE0_D3BJ__def2_TZVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:homo_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.28421"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE0_D3BJ__def2_TZVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:homo_lumo_gap ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.17735"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE0_D3BJ__def2_TZVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:homo_lumo_gap_delta ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.08693000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:electronic_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-912.30266508"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE0_D3BJ__def2_TZVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:electronic_energy_delta ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.8952518769999642"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:dispersion_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.032816228"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE0_D3BJ__def2_TZVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:dispersion_energy_delta ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0033175566999999948"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:enthalpy_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-911.223665"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:enthalpy_energy_correction ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.18374820300005013"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:gibbs_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-911.284108"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:gibbs_energy_correction ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.1233052030000863"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:zpe_correction ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.167337"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:heat_capacity ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "57.842"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:entropy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "127.211"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:dipole_moment ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "11.5569"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE0_D3BJ__def2_TZVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:dipole_moment_delta ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3904000000000014"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:polarisability ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "164.22"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:lowest_vibrational_frequency ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "41.1846"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE_D3BJ__def2_SVP ;
+	] ;
+	inp5:hasProperty [
+		rdf:type cmTp:highest_vibrational_frequency ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3157.9976"^^xmls:float ;
+		nm:optimisation nm:PBE_D3BJ__def2_SVP ;
+		nm:singlepoint nm:PBE_D3BJ__def2_SVP ;
+	] ;
+	cmTp:meta_data [
+		rdf:type cmTp:MetaDataDescription ;
+		inp5:hasProperty [
+			rdf:type cmTp:n_atoms ;
+			inp5:reference dsG:tmQMg ;
+			rdf:value "25"^^xmls:integer ;
+		] ;
+		inp5:hasProperty [
+			rdf:type cmTp:n_electrons ;
+			inp5:reference dsG:tmQMg ;
+			rdf:value "190"^^xmls:integer ;
+		] ;
+		inp5:hasProperty [
+			rdf:type cmTp:metal_center_group ;
+			inp5:reference dsG:tmQMg ;
+			rdf:value "6"^^xmls:integer ;
+		] ;
+		inp5:hasProperty [
+			rdf:type cmTp:metal_center_period ;
+			inp5:reference dsG:tmQMg ;
+			rdf:value "6"^^xmls:integer ;
+		] ;
+		cmT:CSD_code "VIDROP"^^xmls:string ;
+		inp5:hasProperty [
+			rdf:type cmTp:metal_center_element ;
+			inp5:reference dsG:tmQMg ;
+			rdf:value tmAr:W ;
+		] ;
+		inp5:hasProperty [
+			rdf:type cmTp:element_counts ;
+			inp5:reference dsG:tmQMg ;
+			rdf:value [
+				rdf:type inp5:CountDescription ;
+				rdf:_1 [
+					rdf:type inp5:CountDescriptionItem ;
+					inp5:countOf tmAr:W ;
+					rdf:value "1"^^xmls:integer ;
+				] ;
+				rdf:_2 [
+					rdf:type inp5:CountDescriptionItem ;
+					inp5:countOf tmAr:F ;
+					rdf:value "2"^^xmls:integer ;
+				] ;
+				rdf:_3 [
+					rdf:type inp5:CountDescriptionItem ;
+					inp5:countOf tmAr:O ;
+					rdf:value "2"^^xmls:integer ;
+				] ;
+				rdf:_4 [
+					rdf:type inp5:CountDescriptionItem ;
+					inp5:countOf tmAr:N ;
+					rdf:value "2"^^xmls:integer ;
+				] ;
+				rdf:_5 [
+					rdf:type inp5:CountDescriptionItem ;
+					inp5:countOf tmAr:C ;
+					rdf:value "10"^^xmls:integer ;
+				] ;
+				rdf:_6 [
+					rdf:type inp5:CountDescriptionItem ;
+					inp5:countOf tmAr:H ;
+					rdf:value "8"^^xmls:integer ;
+				] ;
+			] ;
+		] ;
+	] ;
+	cmT:hasMetalCentre lgC:VIDROP_metalCentre_W ;
+	cmT:hasLigand lgL:VIDROP_ligand24-0_0 ;
+	cmT:hasLigand lgL:VIDROP_ligand24-0_1 ;
+	cmT:hasLigand lgL:VIDROP_ligand55-0_0 ;
+	cmT:hasLigand lgL:VIDROP_ligand55-0_1 ;
+	cmT:hasLigand lgL:VIDROP_ligand115-0_0 ;
+.
+
+# ----- LIGAND LEVEL -----
+lgC:VIDROP_metalCentre_W
+	lgC:isMetalCentre lgCr:MetalCentre_W ;
+	lgS:bLc lgB:VIDROP_bondL_ligand24-0_0_0 ;
+	lgS:bLc lgB:VIDROP_bondL_ligand24-0_1_0 ;
+	lgS:bLc lgB:VIDROP_bondL_ligand55-0_0_0 ;
+	lgS:bLc lgB:VIDROP_bondL_ligand55-0_1_0 ;
+	lgS:bLc lgB:VIDROP_bondL_ligand115-0_0_0 ;
+	lgS:bLc lgB:VIDROP_bondL_ligand115-0_0_1 ;
+	lgC:hasAtom tmA:VIDROP_W_0 ;
+.
+lgL:VIDROP_ligand24-0_0
+	lgL:isLigand lgLr:Ligand_ligand24-0 ;
+	lgL:subgraphName "VIDROP-subgraph-2"^^xmls:string ;
+	lgS:bLl lgB:VIDROP_bondL_ligand24-0_0_0 ;
+	lgL:hasAtom tmA:VIDROP_O_0 ;
+.
+lgL:VIDROP_ligand24-0_1
+	lgL:isLigand lgLr:Ligand_ligand24-0 ;
+	lgL:subgraphName "VIDROP-subgraph-3"^^xmls:string ;
+	lgS:bLl lgB:VIDROP_bondL_ligand24-0_1_0 ;
+	lgL:hasAtom tmA:VIDROP_O_1 ;
+.
+lgL:VIDROP_ligand55-0_0
+	lgL:isLigand lgLr:Ligand_ligand55-0 ;
+	lgL:subgraphName "VIDROP-subgraph-0"^^xmls:string ;
+	lgS:bLl lgB:VIDROP_bondL_ligand55-0_0_0 ;
+	lgL:hasAtom tmA:VIDROP_F_0 ;
+.
+lgL:VIDROP_ligand55-0_1
+	lgL:isLigand lgLr:Ligand_ligand55-0 ;
+	lgL:subgraphName "VIDROP-subgraph-1"^^xmls:string ;
+	lgS:bLl lgB:VIDROP_bondL_ligand55-0_1_0 ;
+	lgL:hasAtom tmA:VIDROP_F_1 ;
+.
+lgL:VIDROP_ligand115-0_0
+	lgL:isLigand lgLr:Ligand_ligand115-0 ;
+	lgL:subgraphName "VIDROP-subgraph-4"^^xmls:string ;
+	lgS:bLl lgB:VIDROP_bondL_ligand115-0_0_0 ;
+	lgS:bLl lgB:VIDROP_bondL_ligand115-0_0_1 ;
+	lgL:hasAtom tmA:VIDROP_N_0 ;
+	lgL:hasAtom tmA:VIDROP_C_4 ;
+	lgL:hasAtom tmA:VIDROP_C_0 ;
+	lgL:hasAtom tmA:VIDROP_C_3 ;
+	lgL:hasAtom tmA:VIDROP_H_3 ;
+	lgL:hasAtom tmA:VIDROP_C_5 ;
+	lgL:hasAtom tmA:VIDROP_C_1 ;
+	lgL:hasAtom tmA:VIDROP_C_2 ;
+	lgL:hasAtom tmA:VIDROP_H_2 ;
+	lgL:hasAtom tmA:VIDROP_C_6 ;
+	lgL:hasAtom tmA:VIDROP_N_1 ;
+	lgL:hasAtom tmA:VIDROP_H_0 ;
+	lgL:hasAtom tmA:VIDROP_H_1 ;
+	lgL:hasAtom tmA:VIDROP_H_4 ;
+	lgL:hasAtom tmA:VIDROP_C_7 ;
+	lgL:hasAtom tmA:VIDROP_C_9 ;
+	lgL:hasAtom tmA:VIDROP_H_5 ;
+	lgL:hasAtom tmA:VIDROP_C_8 ;
+	lgL:hasAtom tmA:VIDROP_H_7 ;
+	lgL:hasAtom tmA:VIDROP_H_6 ;
+.
+lgB:VIDROP_bondL_ligand24-0_0_0
+	rdf:type lgB:LigandBond ;
+	lgB:hasBindingAtom tmA:VIDROP_O_0 ;
+.
+lgB:VIDROP_bondL_ligand24-0_1_0
+	rdf:type lgB:LigandBond ;
+	lgB:hasBindingAtom tmA:VIDROP_O_1 ;
+.
+lgB:VIDROP_bondL_ligand55-0_0_0
+	rdf:type lgB:LigandBond ;
+	lgB:hasBindingAtom tmA:VIDROP_F_0 ;
+.
+lgB:VIDROP_bondL_ligand55-0_1_0
+	rdf:type lgB:LigandBond ;
+	lgB:hasBindingAtom tmA:VIDROP_F_1 ;
+.
+lgB:VIDROP_bondL_ligand115-0_0_0
+	rdf:type lgB:LigandBond ;
+	lgB:hasBindingAtom tmA:VIDROP_N_0 ;
+.
+lgB:VIDROP_bondL_ligand115-0_0_1
+	rdf:type lgB:LigandBond ;
+	lgB:hasBindingAtom tmA:VIDROP_N_1 ;
+.
+
+# ----- ATOMIC LEVEL -----
+tmA:VIDROP_W_0
+	tmA:isAtom tmAr:W ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2.22773"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.69075"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.26"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.47"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.53162"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.127"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.74274"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0121"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9876"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "1.324512"^^xmls:float ;
+			tmAp:y "2.2e-05"^^xmls:float ;
+			tmAp:z "5e-06"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "6.456"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.97926"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "1.5708093641447"^^xmls:float ;
+			tmAp:y "5.02686111074898"^^xmls:float ;
+			tmAp:z "2.53665653547414"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_W_0_F_0 ;
+	tmS:b tmB:VIDROP_bond_W_0_F_1 ;
+	tmS:b tmB:VIDROP_bond_W_0_O_0 ;
+	tmS:b tmB:VIDROP_bond_W_0_O_1 ;
+	tmS:b tmB:VIDROP_bond_W_0_N_0 ;
+	tmS:b tmB:VIDROP_bond_W_0_N_1 ;
+.
+tmA:VIDROP_F_0
+	tmA:isAtom tmAr:F ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.56273"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "7.55608"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.92"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "5.63"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.49010000000000004"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.37845"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.92008"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9995"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0005"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "0.807413"^^xmls:float ;
+			tmAp:y "-0.000517"^^xmls:float ;
+			tmAp:z "-1.841276"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.006"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.5"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "0.73426785438344"^^xmls:float ;
+			tmAp:y "3.25181779191124"^^xmls:float ;
+			tmAp:z "2.60796412565794"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_W_0_F_0 ;
+.
+tmA:VIDROP_F_1
+	tmA:isAtom tmAr:F ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.56273"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "7.55609"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.92"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "5.63"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.49010000000000004"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.37845"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.92008"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9995"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0005"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "0.807243"^^xmls:float ;
+			tmAp:y "0.000485"^^xmls:float ;
+			tmAp:z "1.841243"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.007"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.49946"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "1.14519867235082"^^xmls:float ;
+			tmAp:y "6.90059242381505"^^xmls:float ;
+			tmAp:z "2.93904569145792"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_W_0_F_1 ;
+.
+tmA:VIDROP_O_0
+	tmA:isAtom tmAr:O ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.68591"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "6.66806"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.86"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.81"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.39592"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.25369"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.63455"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0016"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.996"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0023"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "2.345332"^^xmls:float ;
+			tmAp:y "-1.403189"^^xmls:float ;
+			tmAp:z "0.000467"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "2.196"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.64689"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "2.90603945340502"^^xmls:float ;
+			tmAp:y "4.7835355232441"^^xmls:float ;
+			tmAp:z "3.54853528815278"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_W_0_O_0 ;
+.
+tmA:VIDROP_O_1
+	tmA:isAtom tmAr:O ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.68592"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "6.66806"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.86"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.81"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.39592"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.25369"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.63455"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0016"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.996"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0023"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "2.345136"^^xmls:float ;
+			tmAp:y "1.403376"^^xmls:float ;
+			tmAp:z "-0.0003"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "2.196"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.64858"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "1.93520093361638"^^xmls:float ;
+			tmAp:y "5.13606468232507"^^xmls:float ;
+			tmAp:z "0.88705815292577"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_W_0_O_1 ;
+.
+tmA:VIDROP_N_0
+	tmA:isAtom tmAr:N ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "5"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.45709"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "5.42317"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.34"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.1"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.381"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.79981"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.2898"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.71"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0002"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-0.675256"^^xmls:float ;
+			tmAp:y "-1.340626"^^xmls:float ;
+			tmAp:z "0.000218"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.424"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.50737"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "0.15180555372063"^^xmls:float ;
+			tmAp:y "5.0080987552966"^^xmls:float ;
+			tmAp:z "4.43750076843573"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_W_0_N_0 ;
+	tmS:b tmB:VIDROP_bond_N_0_C_0 ;
+	tmS:b tmB:VIDROP_bond_N_0_C_4 ;
+.
+tmA:VIDROP_N_1
+	tmA:isAtom tmAr:N ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "6"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.45709"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "5.42317"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.34"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.1"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.381"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.79981"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.2898"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.71"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0002"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-0.675317"^^xmls:float ;
+			tmAp:y "1.340607"^^xmls:float ;
+			tmAp:z "-0.000299"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.425"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.50759"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-0.72537865033402"^^xmls:float ;
+			tmAp:y "5.33364066315017"^^xmls:float ;
+			tmAp:z "2.02880700741065"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_W_0_N_1 ;
+	tmS:b tmB:VIDROP_bond_N_1_C_5 ;
+	tmS:b tmB:VIDROP_bond_N_1_C_9 ;
+.
+tmA:VIDROP_C_0
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "7"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.18084"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.79834"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.89"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2.92"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.88988"^^xmls:float ;
+			tmAp:y "-0.744275"^^xmls:float ;
+			tmAp:z "4e-06"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.977"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.22446"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.17919596330121"^^xmls:float ;
+			tmAp:y "5.14392720739523"^^xmls:float ;
+			tmAp:z "4.34673119457827"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_N_0_C_0 ;
+	tmS:b tmB:VIDROP_bond_C_0_C_1 ;
+	tmS:b tmB:VIDROP_bond_C_0_C_5 ;
+.
+tmA:VIDROP_C_1
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "8"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.22024"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.2057"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.2199999999999998"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-3.067761"^^xmls:float ;
+			tmAp:y "-1.515688"^^xmls:float ;
+			tmAp:z "-0.000222"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.989"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.21428"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.99082790101555"^^xmls:float ;
+			tmAp:y "5.08331222914719"^^xmls:float ;
+			tmAp:z "5.4774927895297"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_0_C_1 ;
+	tmS:b tmB:VIDROP_bond_C_1_C_2 ;
+	tmS:b tmB:VIDROP_bond_C_1_H_0 ;
+.
+tmA:VIDROP_C_2
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "9"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.15437"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.13838"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.15"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-2.970554"^^xmls:float ;
+			tmAp:y "-2.912559"^^xmls:float ;
+			tmAp:z "-0.000192"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.984"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.15859"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.40074138188932"^^xmls:float ;
+			tmAp:y "4.87747186896655"^^xmls:float ;
+			tmAp:z "6.71485493938474"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_1_C_2 ;
+	tmS:b tmB:VIDROP_bond_C_2_C_3 ;
+	tmS:b tmB:VIDROP_bond_C_2_H_1 ;
+.
+tmA:VIDROP_C_3
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "10"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.23695"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.22137"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.01"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.2199999999999998"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.703639"^^xmls:float ;
+			tmAp:y "-3.510928"^^xmls:float ;
+			tmAp:z "6.1e-05"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.978"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.22826"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-0.02384079773055"^^xmls:float ;
+			tmAp:y "4.73895696837514"^^xmls:float ;
+			tmAp:z "6.79267587086594"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_2_C_3 ;
+	tmS:b tmB:VIDROP_bond_C_3_C_4 ;
+	tmS:b tmB:VIDROP_bond_C_3_H_2 ;
+.
+tmA:VIDROP_C_4
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "11"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.07153"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.90752"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.97"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2.9499999999999997"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-0.574897"^^xmls:float ;
+			tmAp:y "-2.679972"^^xmls:float ;
+			tmAp:z "0.000249"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.959"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.11762"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "0.7161875580509"^^xmls:float ;
+			tmAp:y "4.81189365441515"^^xmls:float ;
+			tmAp:z "5.61960393560034"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_N_0_C_4 ;
+	tmS:b tmB:VIDROP_bond_C_3_C_4 ;
+	tmS:b tmB:VIDROP_bond_C_4_H_3 ;
+.
+tmA:VIDROP_C_5
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "12"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.18084"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.79835"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.89"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2.92"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.889914"^^xmls:float ;
+			tmAp:y "0.744204"^^xmls:float ;
+			tmAp:z "-7e-06"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.977"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.22457"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.6783277807499"^^xmls:float ;
+			tmAp:y "5.35250932146381"^^xmls:float ;
+			tmAp:z "2.97207982320868"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_N_1_C_5 ;
+	tmS:b tmB:VIDROP_bond_C_0_C_5 ;
+	tmS:b tmB:VIDROP_bond_C_5_C_6 ;
+.
+tmA:VIDROP_C_6
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "13"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.22025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.2057"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.2199999999999998"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-3.06783"^^xmls:float ;
+			tmAp:y "1.515564"^^xmls:float ;
+			tmAp:z "0.00028"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.989"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.21429"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-3.01699130516338"^^xmls:float ;
+			tmAp:y "5.55525433356612"^^xmls:float ;
+			tmAp:z "2.64349147717798"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_5_C_6 ;
+	tmS:b tmB:VIDROP_bond_C_6_C_7 ;
+	tmS:b tmB:VIDROP_bond_C_6_H_4 ;
+.
+tmA:VIDROP_C_7
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "14"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.15437"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.13838"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.15"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-2.970682"^^xmls:float ;
+			tmAp:y "2.91244"^^xmls:float ;
+			tmAp:z "0.000214"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.984"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.1585"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-3.3593670353745"^^xmls:float ;
+			tmAp:y "5.73713541580891"^^xmls:float ;
+			tmAp:z "1.31260933961249"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_6_C_7 ;
+	tmS:b tmB:VIDROP_bond_C_7_C_8 ;
+	tmS:b tmB:VIDROP_bond_C_7_H_5 ;
+.
+tmA:VIDROP_C_8
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "15"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.23695"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "4.22137"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.01"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.2199999999999998"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.703793"^^xmls:float ;
+			tmAp:y "3.510863"^^xmls:float ;
+			tmAp:z "-0.000137"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.978"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "-0.22828"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-2.36352020419925"^^xmls:float ;
+			tmAp:y "5.7130318860526"^^xmls:float ;
+			tmAp:z "0.34881061231108"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_7_C_8 ;
+	tmS:b tmB:VIDROP_bond_C_8_C_9 ;
+	tmS:b tmB:VIDROP_bond_C_8_H_6 ;
+.
+tmA:VIDROP_C_9
+	tmA:isAtom tmAr:C ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "16"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.07154"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "3.90752"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.97"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2.9499999999999997"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-0.575014"^^xmls:float ;
+			tmAp:y "2.679957"^^xmls:float ;
+			tmAp:z "-0.000373"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "3.959"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.11752"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.05194510060959"^^xmls:float ;
+			tmAp:y "5.5079788475153"^^xmls:float ;
+			tmAp:z "0.75702391782129"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_N_1_C_9 ;
+	tmS:b tmB:VIDROP_bond_C_8_C_9 ;
+	tmS:b tmB:VIDROP_bond_C_9_H_7 ;
+.
+tmA:VIDROP_H_0
+	tmA:isAtom tmAr:H ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "17"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.22827"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.77041"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.77"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-4.054233"^^xmls:float ;
+			tmAp:y "-1.034082"^^xmls:float ;
+			tmAp:z "-0.000466"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.995"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.22517"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-3.06048688418532"^^xmls:float ;
+			tmAp:y "5.19071444278894"^^xmls:float ;
+			tmAp:z "5.40094872004246"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_1_H_0 ;
+.
+tmA:VIDROP_H_1
+	tmA:isAtom tmAr:H ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "18"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.23319"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.76556"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.77"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-3.882241"^^xmls:float ;
+			tmAp:y "-3.528333"^^xmls:float ;
+			tmAp:z "-0.000379"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.994"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.22837"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-2.01213651699547"^^xmls:float ;
+			tmAp:y "4.82573928249446"^^xmls:float ;
+			tmAp:z "7.60337232296183"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_2_H_1 ;
+.
+tmA:VIDROP_H_2
+	tmA:isAtom tmAr:H ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "19"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.24012"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.75879"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.76"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.582927"^^xmls:float ;
+			tmAp:y "-4.603224"^^xmls:float ;
+			tmAp:z "9.7e-05"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.994"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.23285"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "0.46735543975545"^^xmls:float ;
+			tmAp:y "4.57702170182156"^^xmls:float ;
+			tmAp:z "7.73839644962872"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_3_H_2 ;
+.
+tmA:VIDROP_H_3
+	tmA:isAtom tmAr:H ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "20"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.24949"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.74891"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.75"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "0.453803"^^xmls:float ;
+			tmAp:y "-3.075418"^^xmls:float ;
+			tmAp:z "0.000423"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.982"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.23791"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "1.79751439825444"^^xmls:float ;
+			tmAp:y "4.71269082322627"^^xmls:float ;
+			tmAp:z "5.59535966295342"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_4_H_3 ;
+.
+tmA:VIDROP_H_4
+	tmA:isAtom tmAr:H ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "21"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.22827"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.77041"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.77"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-4.054281"^^xmls:float ;
+			tmAp:y "1.033917"^^xmls:float ;
+			tmAp:z "0.000595"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.995"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.22522"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-3.77982334355424"^^xmls:float ;
+			tmAp:y "5.57383474006465"^^xmls:float ;
+			tmAp:z "3.40475045196293"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_6_H_4 ;
+.
+tmA:VIDROP_H_5
+	tmA:isAtom tmAr:H ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "22"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.23319"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.76557"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.77"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-3.882396"^^xmls:float ;
+			tmAp:y "3.528175"^^xmls:float ;
+			tmAp:z "0.000448"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.994"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.22835"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-4.39103137818535"^^xmls:float ;
+			tmAp:y "5.8950741454987"^^xmls:float ;
+			tmAp:z "1.03606030843132"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_7_H_5 ;
+.
+tmA:VIDROP_H_6
+	tmA:isAtom tmAr:H ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "23"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.24012"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.75879"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.76"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-1.58313"^^xmls:float ;
+			tmAp:y "4.603165"^^xmls:float ;
+			tmAp:z "-0.000209"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.994"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.23286"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-2.59493623796286"^^xmls:float ;
+			tmAp:y "5.85035448214361"^^xmls:float ;
+			tmAp:z "-0.69499558890229"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_8_H_6 ;
+.
+tmA:VIDROP_H_7
+	tmA:isAtom tmAr:H ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_id ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "24"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.24949"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_population_valence ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.74891"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.75"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_electron_configuration_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_pairs ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_pair_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:n_lone_vacancies ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:lone_vacancy_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:hydrogen_count ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "0.453672"^^xmls:float ;
+			tmAp:y "3.075441"^^xmls:float ;
+			tmAp:z "-0.000616"^^xmls:float ;
+		] ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:valency_index ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.982"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:natural_atomic_charge ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.23792"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmAp:node_position ;
+		inp5:reference dsC:tmQM ;
+		rdf:value [
+			rdf:type inp5:CartesianCoordinates3D ;
+			tmAp:x "-0.21512874643051"^^xmls:float ;
+			tmAp:y "5.47728769876476"^^xmls:float ;
+			tmAp:z "0.06526620331608"^^xmls:float ;
+		] ;
+	] ;
+	tmS:b tmB:VIDROP_bond_C_9_H_7 ;
+.
+tmB:VIDROP_bond_W_0_F_0
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6206"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.9125133691775855"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.325908064516129"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6128774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.06066774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.325908064516129"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6128774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.06066774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeNone ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.816"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_W_0_F_1
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6206"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.912517922889613"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.325908064516129"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6128774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.06066774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.325908064516129"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6128774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.06066774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeNone ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.817"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_W_0_O_0
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.7078"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.7352448808064527"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.24362"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.34484"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98932"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.5006"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.4968"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.65171"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.03024"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.19961"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.5006"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.4968"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.932"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_W_0_O_1
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.7078"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.7352451964252777"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.24362"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.34484"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98932"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.5006"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.4968"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.65171"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.03025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.19961"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.5006"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.4968"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.931"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_W_0_N_0
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.1995"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2.407573292570135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.325908064516129"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6128774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.06066774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.325908064516129"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6128774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.06066774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeNone ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.363"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_W_0_N_1
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.1995"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2.4075888901309543"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.325908064516129"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6128774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.06066774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.325908064516129"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6128774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.06066774193548387"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeNone ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.363"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_N_0_C_0
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.3432"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.353124540599645"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.77827"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98531"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.33385"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6639"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0019500000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.45568"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.02551"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.33385"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6639"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0019500000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.331"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_N_0_C_4
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4018"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.3431007548050888"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.41623000000000004"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.36333"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.74766"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.99845"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00125"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.52507"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.04176"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.38522"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.99845"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00125"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.413"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_N_1_C_5
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.3432"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.3531232375811157"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.77826"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98531"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.33385"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6639"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0019500000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.45569"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.02551"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.33385"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6639"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0019500000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.331"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_N_1_C_9
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4018"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.3431005620522238"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.41623000000000004"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.36333"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.74766"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.99845"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00125"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.52508"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.04176"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.38522"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.99845"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00125"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.413"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_0_C_1
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.3875"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.408006291820459"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35570999999999997"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.30964"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.60664"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9993000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.48939"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.02287"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.33034"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9993000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.388"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_0_C_5
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.0493"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4884790004289614"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.62918"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.97462"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3196"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6793"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0007000000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.37003"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.03707"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3196"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6793"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0007000000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.03"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_1_C_2
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4462"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4002491893909454"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.66297"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98401"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3589"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.63925"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.48988"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01174"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3589"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.63925"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.441"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_1_H_0
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9152"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.097757443862714"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.54698"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.97794"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.64495"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3546"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35065"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01313"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.64495"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3546"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.963"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_2_C_3
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4413"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4011135362257408"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35430999999999996"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.30573"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.62383"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9991499999999999"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00045"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.50755"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.0201"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.29537"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9991499999999999"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00045"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.439"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_2_H_1
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9155"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.1001594611755152"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.54278"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98093"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6437"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35585"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35324"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01288"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6437"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35585"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.967"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_3_C_4
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4178"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4016227780126862"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.6612"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98755"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.36045"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6378"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.4861"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.02238"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.36045"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6378"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.413"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_3_H_2
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.913"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.0989458311745854"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.5373"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.9797"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6465000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35305"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35821"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01159"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6465000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35305"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.966"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_4_H_3
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.8973"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.1020894969066712"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.52839"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.97827"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.65015"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.34934999999999994"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0003"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35729"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01967"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.65015"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.34934999999999994"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0003"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.911"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_5_C_6
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.3875"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.408006546513545"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35570999999999997"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.30964"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.60664"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9993000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.48939"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.02287"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.33034"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9993000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.388"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_6_C_7
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4462"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4002500839621472"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.66297"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98401"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3589"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.63925"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.48988"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01174"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3589"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.63925"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.441"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_6_H_4
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9152"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.0977565792264692"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.54698"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.97794"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.64495"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3546"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35065"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01313"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.64495"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.3546"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.963"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_7_C_8
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4413"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4011131105128523"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "2"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35430999999999996"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.30573"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.62383"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9991499999999999"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00045"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.50755"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.0201"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.29537"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9991499999999999"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00045"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.439"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_7_H_5
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.9155"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.1001600168961785"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.54278"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98093"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6437"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35585"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35324"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01288"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6437"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35585"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.967"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_8_C_9
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4178"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.4016229405132465"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.6612"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.98755"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.36045"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6378"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.48611"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.02238"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.36045"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6378"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00135"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "1.413"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_8_H_6
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.913"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.0989464154166022"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.5373"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.9797"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6465000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35305"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35821"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01159"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.6465000000000001"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35305"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.00025"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.966"^^xmls:float ;
+	] ;
+.
+tmB:VIDROP_bond_C_9_H_7
+	rdf:type tmB:AtomicBond ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.8973"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_distance ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.1020900779432687"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_bn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:n_nbn ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1"^^xmls:integer ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "-0.52839"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "1.97827"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.65015"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.34934999999999994"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:bond_max_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0003"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_energy_min_max_difference ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_energy ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.35729"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.01967"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_s_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.65015"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_p_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.34934999999999994"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:antibond_min_d_occupation ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value "0.0003"^^xmls:float ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:nbo_type ;
+		inp5:reference dsG:tmQMg ;
+		rdf:value tmBr:NBOTypeBD ;
+	] ;
+	inp5:hasProperty [
+		rdf:type tmBp:wiberg_bond_order ;
+		inp5:reference dsC:tmQM ;
+		rdf:value "0.911"^^xmls:float ;
+	] ;
+.
