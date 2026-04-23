@@ -1,0 +1,61 @@
+@prefix ms: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/misc/> .
+@prefix nm: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/numerical/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xmls: <http://www.w3.org/2001/XMLSchema#> .
+
+nm:Optimisation
+	rdf:type rdfs:Class ;
+	rdfs:label "Optimisation"^^xmls:string ;
+	rdfs:comment "Optimizes molecular geometries by relaxing energy gradients"^^xmls:string ;
+.
+
+nm:Singlepoint
+	rdf:type rdfs:Class ;
+	rdfs:label "Singlepoint"^^xmls:string ;
+	rdfs:comment "Computes the energy and other electronic structure properties of optimized geometries"^^xmls:string ;
+.
+
+nm:optimisation
+	rdfs:domain ms:ObservedProperty ;
+	rdfs:range nm:Optimisation ;
+	rdfs:label "Optimisation"^^xmls:string ;
+	rdfs:comment "Indicates the optimisation method used"^^xmls:string ;
+.
+
+nm:singlepoint
+	rdfs:domain ms:ObservedProperty ;
+	rdfs:range nm:Singlepoint ;
+	rdfs:label "Singlepoint"^^xmls:string ;
+	rdfs:comment "Indicates the method used to compute this property given an optimised geometry"^^xmls:string ;
+.
+
+nm:GFN2_xTB
+	rdf:type nm:Singlepoint ;
+	rdfs:label "GFN2-xTB"^^xmls:string ;
+	rdfs:comment "A semi-empirical method in which the solution to the Schrödinger equation is approached through parametrization"^^xmls:string ;
+.
+
+nm:PBE_D3BJ__def2_SVP
+	rdf:type nm:Singlepoint ;
+	rdfs:label "PBE-D3BJ/def2-SVP"^^xmls:string ;
+	rdfs:comment "GGA DFT functional with a double-z quality basis set"^^xmls:string ;
+.
+
+nm:PBE0_D3BJ__def2_SVP
+	rdf:type nm:Singlepoint ;
+	rdfs:label "PBE0-D3BJ/def2-SVP"^^xmls:string ;
+	rdfs:comment "Hybrid GGA DFT functional with a double-z quality basis set"^^xmls:string ;
+.
+
+nm:PBE0_D3BJ__def2_TZVP
+	rdf:type nm:Singlepoint ;
+	rdfs:label "PBE0-D3BJ/def2-TZVP"^^xmls:string ;
+	rdfs:comment "Hybrid GGA DFT functional with a triple-z quality basis set"^^xmls:string ;
+.
+
+nm:TPSSh_D3BJ__def2_SVP
+	rdf:type nm:Singlepoint ;
+	rdfs:label "TPSSh-D3BJ/def2-SVP"^^xmls:string ;
+	rdfs:comment "Hybrid meta-GGA DFT functional with a triple-z quality basis set"^^xmls:string ;
+.

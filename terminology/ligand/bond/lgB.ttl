@@ -1,0 +1,18 @@
+@prefix tmA: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/atomic/atom/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lgB: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/ligand/bond/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xmls: <http://www.w3.org/2001/XMLSchema#> .
+
+lgB:LigandBond
+	rdf:type rdfs:Class ;
+	rdfs:label "Chemical bond (ligand level)"^^xmls:string ;
+	rdfs:comment "This class represents a chemical bond between a metal centre and a binding site within a ligand (intended as an abstract bond between two ligand-level objects, and not as a chemical bond between two atoms). Each LigandBond object can specify several atoms that participate in the bond and when it does, these atoms are considered to be haptic with respect to each other."^^xmls:string ;
+.
+
+lgB:hasBindingAtom
+	rdfs:domain lgB:LigandBond ;
+	rdfs:range tmA:Atom ;
+	rdfs:label "Has binding atom"^^xmls:string ;
+	rdfs:comment "Indicates an atom that acts as binding atom in the chemical bond between ligand level objects represented by the subject."^^xmls:string ;
+.

@@ -1,0 +1,45 @@
+@prefix lgL: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/ligand/ligand/> .
+@prefix lgLr: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/ligand/ligand/reference/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xmls: <http://www.w3.org/2001/XMLSchema#> .
+
+lgLr:LigandClass
+	rdf:type rdfs:Class ;
+	rdfs:label "Ligand class"^^xmls:string ;
+	rdfs:comment "This class represents a ligand class, intended as a label that can be assigned to a ligand representation in order to determine its identity."^^xmls:string ;
+.
+
+lgLr:StableOccurrenceDescription
+	rdf:type rdfs:Class ;
+	rdfs:label "Stable occurrence"^^xmls:string ;
+	rdfs:comment "This class represents the description of the most stable occurrence of a ligand class, made of a subgraph name and a ligand instance (if available in the dataset)."^^xmls:string ;
+.
+
+lgLr:BindingAtomsSMILES
+	rdf:type rdfs:Class ;
+	rdfs:subClassOf rdf:Bag ;
+	rdfs:label "Binding atoms in SMILES string"^^xmls:string ;
+	rdfs:comment "This class represents the description of the binding atoms of a ligand in terms of indices within a SMILES string. It is a collection of BindingSiteSMILES objects."^^xmls:string ;
+.
+
+lgLr:BindingSiteSMILES
+	rdf:type rdfs:Class ;
+	rdfs:subClassOf rdf:Bag ;
+	rdfs:label "Binding site in SMILES string"^^xmls:string ;
+	rdfs:comment "This class represents the description of a group of haptic atoms in a ligand in terms of indices within a SMILES string."^^xmls:string ;
+.
+
+lgLr:subgraph
+	rdfs:domain lgLr:StableOccurrenceDescription ;
+	rdfs:range xmls:string ;
+	rdfs:label "Stable occurrence subgraph"^^xmls:string ;
+	rdfs:comment "Indicates the subgraph name of the most stable occurrence of a ligand class."^^xmls:string ;
+.
+
+lgLr:instance
+	rdfs:domain lgLr:StableOccurrenceDescription ;
+	rdfs:range lgL:Ligand ;
+	rdfs:label "Stable occurrence instance"^^xmls:string ;
+	rdfs:comment "Indicates the instance which is the most stable occurrence of a ligand class."^^xmls:string ;
+.

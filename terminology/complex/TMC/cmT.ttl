@@ -1,0 +1,33 @@
+@prefix lgL: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/ligand/ligand/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xmls: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lgC: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/ligand/centre/> .
+@prefix cmT: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/complex/TMC/> .
+
+cmT:TransitionMetalComplex
+	rdf:type rdfs:Class ;
+	rdfs:label "Transition Metal Complex (TMC)"^^xmls:string ;
+	rdfs:comment "This class represents Transition Metal Complexes."^^xmls:string ;
+.
+
+cmT:CSD_code
+	rdfs:domain cmT:TransitionMetalComplex ;
+	rdfs:range xmls:string ;
+	rdfs:label "CSD code"^^xmls:string ;
+	rdfs:comment "Indicates the Cambridge Structural Database code of a TMC."^^xmls:string ;
+.
+
+cmT:hasMetalCentre
+	rdfs:domain cmT:TransitionMetalComplex ;
+	rdfs:range lgC:MetalCentre ;
+	rdfs:label "Has metal centre"^^xmls:string ;
+	rdfs:comment "Indicates the metal centre (intended as ligand level object) of a TMC."^^xmls:string ;
+.
+
+cmT:hasLigand
+	rdfs:domain cmT:TransitionMetalComplex ;
+	rdfs:range lgL:Ligand ;
+	rdfs:label "Has ligand"^^xmls:string ;
+	rdfs:comment "Indicates a ligand (intended as ligand level object) possessed by TMC."^^xmls:string ;
+.

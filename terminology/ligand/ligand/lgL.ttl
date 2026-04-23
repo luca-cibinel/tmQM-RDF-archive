@@ -1,0 +1,34 @@
+@prefix tmA: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/atomic/atom/> .
+@prefix lgLr: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/ligand/ligand/reference/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xmls: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lgL: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/ligand/ligand/> .
+
+lgL:Ligand
+	rdf:type rdfs:Class ;
+	rdfs:label "Ligand"^^xmls:string ;
+	rdfs:comment "This class represents a ligand (intended as an abstract object that exists at the ligand level, and not as a molecule made of atoms chemically bonded to each other)."^^xmls:string ;
+.
+
+lgL:isLigand
+	rdfs:subPropertyOf rdf:type ;
+	rdfs:domain lgL:Ligand ;
+	rdfs:range lgLr:LigandClass ;
+	rdfs:label "Is ligand"^^xmls:string ;
+	rdfs:comment "Specifies the class of a ligand (intended as ligand level object)."^^xmls:string ;
+.
+
+lgL:subgraphName
+	rdfs:domain lgL:Ligand ;
+	rdfs:range xmls:string ;
+	rdfs:label "Subgraph name"^^xmls:string ;
+	rdfs:comment "Specifies the name of the subgraph that corresponds to a ligand instance (intended as ligand level object)."^^xmls:string ;
+.
+
+lgL:hasAtom
+	rdfs:domain lgL:Ligand ;
+	rdfs:range tmA:Atom ;
+	rdfs:label "Has atom"^^xmls:string ;
+	rdfs:comment "Indicates the atom possessed by (i.e., that is part of) a ligand (intended as ligand level object)	."^^xmls:string ;
+.

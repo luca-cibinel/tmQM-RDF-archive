@@ -1,0 +1,70 @@
+@prefix ms: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/misc/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ds: <https://www.integreat.no/research/rdf/tmqm-rdf-dataset/#/datasets/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xmls: <http://www.w3.org/2001/XMLSchema#> .
+
+ms:PropertyType
+	rdf:type rdfs:Class ;
+	rdfs:label "PropertyType"^^xmls:string ;
+	rdfs:comment "This class represents a possible property type, intended as one of the many types of properties that are reported in the tmQM series."^^xmls:string ;
+.
+
+ms:NonSimplePropertyValue
+	rdf:type rdfs:Class ;
+	rdfs:label "Non-elementary Property value"^^xmls:string ;
+	rdfs:comment "This class represents an articulated property value that cannot be represented using a single URI/literal."^^xmls:string ;
+.
+
+ms:CartesianCoordinates3D
+	rdf:type rdfs:Class ;
+	rdfs:subClassOf ms:NonSimplePropertyValue, rdf:Seq ;
+	rdfs:label "3D Cartesian coordinates"^^xmls:string ;
+	rdfs:comment "This class represents a set of coordinates in the Cartesian coordinate system of the three-dimensional Euclidean space R^3."^^xmls:string ;
+.
+
+ms:CountDescription
+	rdf:type rdfs:Class ;
+	rdfs:subClassOf ms:NonSimplePropertyValue, rdf:Bag ;
+	rdfs:label "Count description"^^xmls:string ;
+	rdfs:comment "This class represents the description of a count property, intended as a bag of items, each one representing the count of a specific object."^^xmls:string ;
+.
+
+ms:CountDescriptionItem
+	rdf:type rdfs:Class ;
+	rdfs:label "Count description item"^^xmls:string ;
+	rdfs:comment "This class represents an item in the description of a count property, representing the count of a specific object."^^xmls:string ;
+.
+
+ms:ObservedProperty
+	rdf:type rdfs:Class ;
+	rdfs:label "Observed property"^^xmls:string ;
+	rdfs:comment "This class represents an observation of a property."^^xmls:string ;
+.
+
+ms:Countable
+	rdf:type rdfs:Class ;
+	rdfs:label "Countable entity"^^xmls:string ;
+	rdfs:comment "This class represents a countable entity."^^xmls:string ;
+.
+
+ms:hasProperty
+	rdfs:domain rdfs:Resource ;
+	rdfs:range ms:ObservedProperty ;
+	rdfs:label "Has property"^^xmls:string ;
+	rdfs:comment "Asserts that an object possesses a property."^^xmls:string ;
+.
+
+ms:countOf
+	rdfs:domain ms:CountDescriptionItem ;
+	rdfs:range ms:Countable ;
+	rdfs:label "Is count of"^^xmls:string ;
+	rdfs:comment "In count properties (e.g. element counts) specifies the object being counted."^^xmls:string ;
+.
+
+ms:reference
+	rdfs:domain ms:Property ;
+	rdfs:range ds:Dataset ;
+	rdfs:label "Reference dataset"^^xmls:string ;
+	rdfs:comment "Indicates that the an atom participates in the chemical bond represented by the object."^^xmls:string ;
+.
